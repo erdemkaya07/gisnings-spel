@@ -37,9 +37,11 @@ gissa++;
 gissaCount.textContent = maxGissa - gissa;
 
 if(gissa >= maxGissa && gissaInput.value !== nummer){
-  message.textContent = `Tyvär! Nummer är ${nummer}`
+  message.textContent = `Tyvär!  Du gissade 10 gånger. Nummer är ${nummer}`
   btn.disabled = true;
 }
+
+gissaInput.value ='';
 
 })
 
