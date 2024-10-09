@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.gissa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgb(255, 156, 139);
+  padding: 1rem;
+  border-radius: .5rem;
+  background-color: tomato;
+}
+
+.gissa-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .gissa-input {
+    padding: .6rem;
+    border: 0;
+  }
+  .btn {
+    padding: .6rem;
+    border: 0;
+    background-color: rgb(192, 29, 0);
+    color: white;
+    &:hover {
+      background-color: rgb(241, 48, 14);
+      cursor: pointer;
+    }
+  }
+}

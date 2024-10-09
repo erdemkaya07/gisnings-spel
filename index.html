@@ -4,8 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <div class="container">
+    <div class="gissa">
+      <h2>Gissa ett nummer mellan 1 och 100</h2>
+      <p>Du kan gissa 10 gånger <span id="message"></span></p>
+      <form id="gissa-form" class="gissa-form">
+        <input type="text" id="gissa-input" class="gissa-input" placeholder="Gissa nummer">
+        <button id="submit" class="btn">Submit</button>
+      </form>
+      <p>Försök kvar : <span id="gissaCount"></span></p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
