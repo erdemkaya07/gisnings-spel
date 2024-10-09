@@ -12,10 +12,19 @@ const maxGissa = 10;
 
 gissaForm.addEventListener('submit', e => {
   e.preventDefault();
+
+  if(gissaInput.value < 1 || gissaInput.value > 100) {
+    alert('Du måste skriva mellan 1 och 100');
+    return
+  } else if (isNaN(gissaInput.value)) {
+    alert('Du måste skriva ett nummer')
+    return
+  }
+
 gissa++;
-if(gissaInput.value <= 100 && !isNaN(gissaInput.value)){
+
   if(gissaInput.value == nummer){
-    message.textContent =`Bravo!  Du gissade rätt på ${gissa} försöket.`;
+    message.textContent =`Bra!  Du gissade rätt på ${gissa} försöket.`;
     message.style.fontWeight = '700';
     message.style.color = 'white';
   } else if (gissaInput.value > nummer) {
@@ -25,10 +34,6 @@ if(gissaInput.value <= 100 && !isNaN(gissaInput.value)){
     helpToUser.textContent = `Skriv ett större tal`
     helpToUser.style.fontWeight = '700';
   }
-} else {
-  alert('Du måste skriva mellan 1 och 100')
-}
-
 gissaCount.textContent = maxGissa - gissa;
 
 if(gissa >= maxGissa && gissaInput.value !== nummer){
@@ -37,15 +42,5 @@ if(gissa >= maxGissa && gissaInput.value !== nummer){
 }
 
 })
-
-
- /*  console.log(gissaInput)
-  if(gissaInput.value == nummer) {
-    console.log('dogru sayiyi girdiniz');
-  } else if(gissaInput.value <= nummer){
-    console.log('Girdigniz sayi kucuktur');
-  } else {
-    console.log('Girdigniz sayi buyuktur');
-  } */
 
 
