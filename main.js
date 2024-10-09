@@ -2,6 +2,7 @@ const gissaForm = document.querySelector('#gissa-form');
 const gissaInput = document.querySelector('#gissa-input');
 const gissaCount = document.querySelector('#gissaCount');
 const message = document.querySelector('#message');
+const helpToUser = document.querySelector('#helpToUser');
 const btn = document.getElementById('submit');
 
 const nummer = 33;
@@ -15,10 +16,14 @@ gissa++;
 if(gissaInput.value <= 100 && !isNaN(gissaInput.value)){
   if(gissaInput.value == nummer){
     message.textContent =`Bravo!  Du gissade rätt på ${gissa} försöket.`;
+    message.style.fontWeight = '700';
+    message.style.color = 'white';
   } else if (gissaInput.value > nummer) {
-    console.log('Skriv ett mindre tal')
+    helpToUser.textContent = `Skriv ett mindre tal`
+    helpToUser.style.fontWeight = '700';
   } else if (gissaInput.value < nummer) {
-    console.log('Skriv ett större tal')
+    helpToUser.textContent = `Skriv ett större tal`
+    helpToUser.style.fontWeight = '700';
   }
 } else {
   alert('Du måste skriva mellan 1 och 100')
